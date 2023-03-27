@@ -91,6 +91,23 @@ class ListTasksTest {
 
         assertEquals(expected,listTasks.compareYesNo(ints1,ints2));
     }
+    @Test
+    public void yesNo_test_big(){
+        List<String> expected = Arrays.asList("Yes","No");
+        List<Integer> ints1 = Arrays.asList(199_999_999,299_999_999);
+        List<Integer> ints2 = Arrays.asList(199_999_999,399_999_999);
+
+        assertEquals(expected,listTasks.compareYesNo(ints1,ints2));
+    }
+    //@Test  test with == in method compareYesNo border 127
+    public void yesNo_test_Object_have_border_int_127(){
+        List<String> expected = Arrays.asList("Yes","No");
+        List<Integer> ints1 = Arrays.asList(127,128);
+        List<Integer> ints2 = Arrays.asList(127,128);
+
+        assertEquals(expected,listTasks.compareYesNo(ints1,ints2));
+    }
+
 
 
 

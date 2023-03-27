@@ -1,10 +1,19 @@
 package Homework;
 public class Person {
-    String name;
-    String address;
-    public Person(String name, String address) {
+    private String name;
+    private Address address;
+
+    public Person(String name, Address address) {
         this.name = name;
         this.address = address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Address getAddress() {
+        return address;
     }
 
     public String toString() {
